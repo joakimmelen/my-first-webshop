@@ -6,6 +6,12 @@ import { cartStatus, removeItemSelector } from "../recoil/cart/selectors";
 import { productsState } from "../recoil/products/atom";
 import Cart from "../components/Cart"
 
+/// https://github.com/alan2207/bulletproof-react
+/// chakra
+/// https://reactjs.org/docs/code-splitting.html
+/// https://nextjs.org/showcase
+
+
 function Campaigns() {
 
   const products = useRecoilValue(productsState);
@@ -24,11 +30,13 @@ function Campaigns() {
     <div>
         {/* <Products /> */}
         <h3>Shoppa loss</h3>
+        {/* <div key={product.id}>{product.title}  */}
         {products.map((product) => (
           <button key={product.id} onClick={() => handleAdd(product)}>
             {product.title} - {product.price}kr
           </button>
         ))}
+        {/* </div> */}
         <div>
           {/* <h3>Din varukorg</h3>
           {cart.map((product, index) => (

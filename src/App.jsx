@@ -8,6 +8,7 @@ import Contact from './pages/Contact'
 import ErrorPage from './pages/ErrorPage'
 import Cart from './components/Cart'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
